@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "swiggy_top3_reccom"
+version = "0.0.1"
+description = "This project will help reccomend the top3 food items on swiggy home page."
+authors = [
+  { name = "sk" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["swiggy_top3_reccom"]
+include = ["pyproject.toml", "swiggy_top3_reccom/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["swiggy_top3_reccom"]
+force-sort-within-sections = true
+
